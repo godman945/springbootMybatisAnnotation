@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8"/>
-</head>
-<body>
-     ç¬¬ä¸€æ”¯<br>
-     
-<img src="https://1.bp.blogspot.com/-B6C83-zdKCI/Tk8vRulSMbI/AAAAAAAAAnc/VQn6ecbMBIk/s1600/kung_fu_panda.jpg"></img>
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+<script src="js/jquery/jquery-1.12.4.js"></script>
+<script src="js/login/login.js"></script>
+
+
+
+<h2>Modal Login Form</h2>
+<button onclick="document.getElementById('id01').style.display='block'"	style="width: auto;">Login</button>
+<div id="id01" class="modal">
+	<form class="modal-content animate">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> 
+			<img src="login/img_avatar.jpg" alt="Avatar" class="avatar">
+		</div>
+		
+		<div class="container" id="loginDiv">
+			<label for="uname"><b>Username</b></label> 
+				 <input type="text" placeholder="Enter Username" v-model="user.account" name="useranme"  />
+			<label for="psw"><b>Password</b></label> 
+				<input type="text" placeholder="Enter Password" v-model="user.pd" name="password"  />
+			<button type="button" v-on:click="loginFunc">Login</button>
+			<label> 
+				<input type="checkbox" checked="checked" name="remember" > Remember me
+			</label>
+			[ÅçÃÒµ²ªG{{ message }}]
+		</div>
+		<div class="container" style="background-color: #f1f1f1">
+			<button type="button"
+				onclick="document.getElementById('id01').style.display='none'"
+				class="cancelbtn">Cancel</button>
+			<span class="psw">Forgot <a href="#">password?</a></span>
+		</div>
+	</form>
+</div>
+<script>
+	var modal = document.getElementById('id01');
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
