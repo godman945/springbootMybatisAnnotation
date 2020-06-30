@@ -1,7 +1,0 @@
-<header th:fragment="header">
-  <ul>
-    <li>news</li>
-    <li>blog</li>
-    <li>post</li>
-  </ul>
-</header>

@@ -1,44 +1,35 @@
 $(document).ready(function(){
 	
-console.log("DDD");		
-
-
-let app = new Vue({
-    el: '#loginDiv',/*定義Vue作用範圍，el指的是element*/
-    data: {
-        user: { 
-        	account: "",
-        	pd:""
-        },
-        message: '',
-        loginResult:"" //登入結果
-    },
-    methods: { 
-        loginFunc: function () {
-            let obj = this;
-            $.ajax({
-	            url: "checkLogin",
-	            data: obj.user ,
-	            type:"POST",
-				dataType:"JSON",
-	            success: function (response) {
-	             //   vm.loginResult=text;
-	            	console.log(response);
-	            	obj.message = response;
-	            },
-				error: function(response) {
-					alert("系統繁忙，請稍後再試！");
-				}
-        	});
-            
-            
-            console.log(obj);
-            console.log(obj.user);
-            console.log(obj.user.account);
-            console.log(obj.user.pd);
-        }
-    }
-});//end new Vue
-
+	
+	
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}
 
 });
+
+/* 控制登入區塊 START*/
+var loginSubmitController = function($scope){
+	$scope.submit = function(){
+		if($scope.account == undefined){
+			$scope.message='帳號不可為空';
+		}else if($scope.pd == undefined){
+			$scope.message='密碼不可為空';
+		}else{
+			$scope.message='';
+			
+//			var formData = new FormData();
+//        	formData.append("account", $scope.account);
+//        	formData.append("pd", $scope.pd);
+			
+			
+			
+		}
+		
+	}
+};
+
+/* 控制登入區塊 END */
