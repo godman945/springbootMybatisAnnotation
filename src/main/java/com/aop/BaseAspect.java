@@ -17,7 +17,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 //ALEX-01
 //第一次commit
 //@Aspect
-//@Component
+//@Component 
 public class BaseAspect {
 	 @Pointcut("execution(public * com.api..*.*(..))*")
 	 public void doBeforeController(){
