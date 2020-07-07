@@ -14,13 +14,13 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
+//ALEX
 //@Aspect
 //@Component
 public class BaseAspect {
 	 @Pointcut("execution(public * com.api..*.*(..))*")
 	 public void doBeforeController(){
-
+		 
 	 }
 	 @Before("doBeforeController()")
 	 public void doBefore(JoinPoint joinPoint) throws Throwable {
