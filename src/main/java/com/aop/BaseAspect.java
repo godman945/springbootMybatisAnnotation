@@ -14,7 +14,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-//ALEX2
+//ALEX3
 //@Aspect
 //@Component
 public class BaseAspect {
