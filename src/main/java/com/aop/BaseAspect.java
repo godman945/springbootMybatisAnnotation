@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-//第一次commit
+//第一次commit  
 //@Aspect
 //@Component 
 public class BaseAspect {
