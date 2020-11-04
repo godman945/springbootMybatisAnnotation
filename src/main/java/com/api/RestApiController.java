@@ -1,25 +1,63 @@
 package com.api;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.servlet.view.RedirectView;
-
-import freemarker.template.utility.StringUtil;
 
 @Controller
 public class RestApiController {
+	
+	/*
+	@RequestMapping(value = "/upload",method = { RequestMethod.POST, RequestMethod.GET })
+	@ResponseBody
+	public ResponseEntity<?> uploadFileMulti(@RequestParam("files") MultipartFile[] uploadfiles){
+	
+		System.out.println("貝絲成功 uploadFileMulti");
+		
+		
+	    // 取得檔案名稱
+	    String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
+	            .filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
+	
+	    if (StringUtils.isEmpty(uploadedFileName)) {
+	        return new ResponseEntity("請選擇檔案!", HttpStatus.OK);
+	    }
+	
+	    try {
+	
+	        saveUploadedFiles(Arrays.asList(uploadfiles));
+	
+	    } catch (IOException e) {
+	        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+	    }
+	
+	    return new ResponseEntity("成功上傳 - "
+	            + uploadedFileName, HttpStatus.OK);
+	
+	}
+	
+	//將檔案儲存
+    private void saveUploadedFiles(List<MultipartFile> files) throws IOException {
+
+        for (MultipartFile file : files) {
+
+            if (file.isEmpty()) {
+                continue; //繼續下一個檔案
+            }
+
+            byte[] bytes = file.getBytes();
+            Path path = Paths.get(".//upload//" + file.getOriginalFilename());
+            Files.write(path, bytes);
+
+        }
+
+    }
+    */
+	
+	
 	
 //	
 //	@RequestMapping("/index")
